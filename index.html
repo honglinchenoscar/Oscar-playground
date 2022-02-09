@@ -1,0 +1,2492 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Oscar Digital</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+		    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+        <link rel ="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+
+        <meta charset="UTF-8">
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+	</head>
+
+	<body>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto:wght@900&display=swap');
+        </style>
+
+
+
+
+        <!-- header -->
+
+          <p class="name">OSCAR CHEN</p>
+          <button class="portfolio" onclick="window.location.href='https://www.oscarchen.myportfolio.com';" target="_blank">Protfolio</button>
+
+        <div class="bigbox">
+            <div class="lake">
+                <script type="application/processing">
+                
+                float frames;
+                float wave;
+                float cage;
+                float hw;
+                float x;
+                
+                void setup(){
+                size(1280,720);
+                frameRate(100);
+                }
+                
+                void draw(){
+                
+                background(204, 151, 103);//bg
+                frames = frames + 1;
+                //hw
+                x = x + 0.1;
+                hw = sin(x);
+                
+                //cage1
+                pushMatrix();
+                rotate(radians(-1));
+                for (int i = 0; i <= 200; i = i + 4){
+                    noStroke();
+                    fill(45,23,24);//dark red
+                    rect(100+i,100+0.4*wave,2,500);
+                    rect(100,100+0.4*wave,202,8);
+                }
+                popMatrix();
+                
+                //cage2
+                pushMatrix();
+                rotate(radians(3));
+                translate(-0.5*wave,-0.2*wave);
+                fill(45,23,24);//dark red
+                for (int i = 0; i <= 200; i = i + 4){
+                    noStroke();
+                    rect(270+i,200+wave,2,500);
+                    rect(270,200+wave,202,8);
+                }
+                popMatrix();
+                
+            
+                //cage3
+                pushMatrix();
+                rotate(radians(-10));
+                for (int i = 0; i <= 200; i = i + 4){
+                    noStroke();
+                    fill(45,23,24);//dark red
+                    rect(600+i,530+wave,2,500);
+                    rect(600,530+wave,202,8);
+                }
+                popMatrix();
+                
+                //wave
+                if (frames >= 500){
+                 wave = wave - 0.08;
+               } 
+               else {wave = wave + 0.08;
+               }
+               fill(45,23,24);//dark red
+               noStroke();
+               beginShape();
+               curveVertex(-10,450);
+               curveVertex(-10,450);
+               curveVertex(100,443+0.2*wave);
+               curveVertex(200,450-0.3*wave);
+               curveVertex(300,442+0.3*wave);
+               curveVertex(400,450-0.2*wave);
+               curveVertex(500,442+0.1*wave);
+               curveVertex(600,450-0.2*wave);
+               curveVertex(700,443+0.1*wave);
+               curveVertex(800,450-0.2*wave);
+               curveVertex(900,443+0.3*wave);
+               curveVertex(1000,452-0.1*wave);
+               curveVertex(1100,442+0.3*wave);
+               curveVertex(1200,451-0.2*wave);
+               vertex(1290,450);
+               vertex(1290,730);
+               vertex(-10,730);
+               vertex(-10,450);
+               endShape();
+                
+                //bubbles
+                fill  (205,133,63);//mid color
+                ellipse(800+1.5*hw,700-1.2*frames,10,10);
+                ellipse(850+2*hw,650-0.8*frames,11,11);
+                ellipse(820+1.2*-hw,620-0.85*frames,10,10);
+                ellipse(870+2*hw,710-0.9*frames,9,9);
+                ellipse(890+1*-hw,700-1*frames,10,10);
+                ellipse(920+4*-hw,720-1.1*frames,11,11);
+                ellipse(950+3*-hw,660-1.5*frames,8,8);
+                ellipse(970+2*-hw,740-1.4*frames,12,12);
+                ellipse(990+2*-hw,640-1.2*frames,14,14);
+                ellipse(1000+1.5*-hw,690-1.5*frames,11,11);
+                ellipse(1020+2*-hw,670-1.4*frames,7,7);
+                ellipse(1060+3*-hw,680-1.5*frames,5,5);
+                ellipse(1100+5*-hw,630-1.7*frames,6,6);
+                
+                //counter
+                pushMatrix();
+                rotate(radians(5));
+                translate(0,0.5*wave);
+                fill(45,23,24);//dark red
+                rect(1150,300,30,50,5,5,5,5);
+                //signal o
+                if (frames > 900 ){
+                    strokeWeight(3);
+                    stroke(165,60,12);//mid color
+                    line(1150+15-5,300+15-5,1150+15+5,300+15+5);
+                    line(1150+15+5,300+15-5,1150+15-5,300+15+5);
+                }
+                else {
+                    stroke(165,60,12);//mid color
+                    noFill();
+                    strokeWeight(3);
+                    ellipse(1150+15,300+15,13,13);
+                }  
+                popMatrix();
+                
+                    //refresh
+                if (frames == 1000){
+                    frames = 0;
+                    wave = 0;
+                }
+                }
+                </script>
+                <canvas></canvas>
+            </div>
+    
+
+    
+
+
+
+
+
+
+
+            <div class="big__box">
+
+                <div class="intro__box">
+                        <button class="intro__text">Oscar is an industrial designer from Shenzhen.</button>
+                </div>
+        
+
+
+            
+                <div class="table__box">
+                        <!-- row 1 -->
+                        <button>c</button><button>l</button><button>w</button><button>c</button><button>k</button><button>i</button><button>k</button><button>h</button><button class = "highlight">S</button><button>b</button>
+                        <!-- row 2 -->
+                        <button>y</button><button>r</button><button>x</button><button>f</button><button class = "highlight">R</button><button>y</button><button>u</button><button class = "highlight">h</button><button>h</button><button>u</button>
+                        <!-- row 3 -->
+                        <button>y</button><button id="dbutton" class = "highlight">d</button><button>c</button><button>v</button><button>e</button><button class = "highlight">I</button><button class = "highlight">e</button><button>t</button><button>x</button><button class = "highlight">r</button>
+                        <!-- row 4 -->
+                        <button>l</button><button class = "highlight">e</button><button>j</button><button>a</button><button>y</button><button class = "highlight">n</button><button class = "highlight">S</button><button>s</button><button>u</button><button class = "highlight">a</button>
+                        <!-- row 5 -->
+                        <button>z</button><button class = "highlight">s</button><button>d</button><button>d</button><button class = "highlight">z</button><button>s</button><button>t</button><button class = "highlight">D</button><button>k</button><button class = "highlight">c</button>
+                        <!-- row 6 -->
+                        <button>b</button><button class = "highlight">i</button><button>n</button><button class = "highlight">h</button><button>r</button><button>k</button><button>b</button><button>o</button><button>u</button><button class = "highlight">s</button>
+                        <!-- row 7 -->
+                        <button>w</button><button class = "highlight">g</button><button class = "highlight">e</button><button>a</button><button>c</button><button>t</button><button>q</button><button>l</button><button>s</button><button class = "highlight">O</button>
+                        <!-- row 8 -->
+                        <button class="highlight">i</button><button class="highlight" class = "highlight">n</button><button class = "highlight">d</button><button class = "highlight">u</button><button class = "highlight">s</button><button class="highlight">t</button><button class = "highlight">r</button><button class = "highlight">i</button><button class = "highlight">a</button><button class = "highlight">l</button>
+                        <!-- row 9 -->
+                        <button>x</button><button class = "highlight">e</button><button>b</button><button>e</button><button>h</button><button>q</button><button>c</button><button>r</button><button>l</button><button>p</button>
+                        <!-- row 10 -->
+                        <button>z</button><button class = "highlight">r</button><button>r</button><button>i</button><button>m</button><button>q</button><button>x</button><button>b</button><button>t</button><button>p</button>
+                </div>
+            </div>
+        
+
+
+            <div id="film">
+              <!-- One second film -->
+              <script type="application/processing">
+                  float frames;
+                  float firstball;
+                  float secondball;
+                  float i;
+                  float netx;
+                  float nety;
+                  float xlight;
+                  float anglex;
+                  float angley;
+                  float ax;
+                  float ay;
+                  float patha;
+                  float pathb;
+                  float pathc;
+                  float pathd;
+
+                  void setup(){
+                  size(1280,720);//卡其色中
+                  frameRate(24);
+                  rectMode(CENTER);
+                  }
+                  
+                  void draw(){
+                  background(204, 151, 103);//bg
+                  strokeWeight(4);
+                  frames = frames + 1;
+                  
+                  //vertical balls
+                  firstball = firstball + 25;
+                  secondball = secondball + 25;
+                  if (firstball >= 300){
+                      firstball = 300;
+                      noStroke();
+                      fill(245, 245, 221);//highlight
+                      ellipse(1000,100+secondball,10,10);
+                  }
+                  
+                  //static ball 1
+                  noStroke();
+                  fill(245, 245, 221);//卡其色轻
+                  ellipse(1000,300,10,10);
+                  //static ball 2
+                  ellipse(1000,320,10,10);
+                  //static ball 3
+                  ellipse(1000,340,10,10);
+                  //first ball
+                  ellipse(1000,firstball,10,10);
+                  
+                  //cube1
+                  strokeWeight(4);
+                  stroke(222,184,135);//lines
+                  noFill();
+                  rect(500,400,60,60,1,1,1,1);
+                  fill(222,184,135);//highlight
+                  rect(500+100,400+100,60,60,1,1,1,1);
+                  line(500-30,400-30,500+130,400+130);//mid
+                  line(500-30,400+30,500+70,400+30+100);//low
+                  line(500+30,400-30,500+130,400+70);//up
+                  
+                  //net
+                  //shadow
+                  fill(174, 110, 78);//shadow
+                  noStroke();
+                  rect(770,290,70,130,3,3,3,3);
+                  
+                  netx = netx + 0.1;
+                  nety = nety + 0.1;
+                  noStroke();
+                  fill(245, 245, 221);//lines
+                  
+                  for (int i = 0; i < 130; i = i+20)
+                      ellipse(700+netx,200+i+nety,5,5);
+                  
+                  for (int i = 0; i < 130; i = i+20)
+                      ellipse(720+netx,200+i+nety,5,5);
+                      
+                  for (int i = 0; i < 130; i = i+20)
+                      ellipse(740+netx,200+i+nety,5,5);
+                      
+                  for (int i = 0; i < 130; i = i+20)
+                      ellipse(760+netx,200+i+nety,5,5);
+                  
+                  //zigzag
+                  strokeWeight(4);
+                  stroke(174, 110, 78);//shadow
+                  noFill();
+                  //zag right
+                  beginShape();
+                  vertex(200,600);
+                  vertex(180,620);
+                  vertex(200,640);
+                  vertex(180,660);
+                  vertex(200,680);
+                  vertex(180,700);
+                  vertex(200,720);
+                  endShape();
+                  
+                  //zag left
+                  beginShape();
+                  vertex(200-20,600);
+                  vertex(180-20,620);
+                  vertex(200-20,640);
+                  vertex(180-20,660);
+                  vertex(200-20,680);
+                  vertex(180-20,700);
+                  vertex(200-20,720);
+                  endShape();
+                  
+                  //zag left left
+                  beginShape();
+                  vertex(200-40,600);
+                  vertex(180-40,620);
+                  vertex(200-40,640);
+                  vertex(180-40,660);
+                  vertex(200-40,680);
+                  vertex(180-40,700);
+                  vertex(200-40,720);
+                  endShape();
+                  
+                  //zag left left
+                  beginShape();
+                  vertex(200-60,600);
+                  vertex(180-60,620);
+                  vertex(200-60,640);
+                  vertex(180-60,660);
+                  vertex(200-60,680);
+                  vertex(180-60,700);
+                  vertex(200-60,720);
+                  endShape();
+                  
+
+                  
+                  //Xes
+                  strokeWeight(4);
+                  stroke(174, 110, 78);//lines
+                  xlight = xlight + 1;
+                  //x1
+                  line(100,100,100+15,100+15);
+                  line(100+15,100,100,100+15);
+                  //x2
+                  line(100,100+30,100+15,100+15+30);
+                  line(100+15,100+30,100,100+15+30);
+                  //x3
+                  line(100,100+30+30,100+15,100+15+30+30);
+                  line(100+15,100+30+30,100,100+15+30+30);
+                  //x4
+                  line(100,100+30+30+30,100+15,100+15+30+30+30);
+                  line(100+15,100+30+30+30,100,100+15+30+30+30);
+                  
+                  
+                  //x1 lighted
+                  if (xlight >= 12){
+                      stroke(245, 245, 221);//highlight
+                      line(100,100,100+15,100+15);
+                      line(100+15,100,100,100+15);
+                      
+                  //corner circle lighted
+                      noStroke();
+                      fill(245, 245, 221);//shadow
+                      ellipse(400,600,20,20);
+                  }
+                  
+                  //rounding ball
+                  noFill();
+                  noStroke();
+                  anglex = anglex + 15;
+                  angley = angley + 15;
+                  ax = 10 * sin(radians(anglex));
+                  ay = 10 * cos(radians(angley));
+                  stroke(174, 110, 78);//shadow
+                  strokeWeight(2);
+                  ellipse(400+ax,150+ay,20,20);
+                  
+                  //rounding rect
+                  fill(174, 110, 78);//highlight
+                  noStroke();
+                  rect(850+ax,550+ay,30,30,3,3,3,3);
+                  
+                  //rounding lines
+                  stroke(174, 110, 78);//shadow
+                  strokeWeight(4);
+                  line(1100+ax,400+ay,1130+ax,400+ay);
+                  stroke(139, 68, 17);//lines
+                  line(1110+ax,410+ay,1140+ax,410+ay);
+                  
+                  
+                  //dotted circle
+                      
+                  //shadow
+                  fill(174, 110, 78);//shadow
+                  noStroke();
+                  ellipse(175,400,105,105);
+                  
+                  //outline
+                  final float N=20;
+                  float da=TWO_PI/N;
+                  float rad=50;
+                  PVector centroid =new PVector(width/2,height/2);
+                  
+
+                  noStroke();
+                  fill(245, 245, 221);//lines
+                  for(float a=0;a<TWO_PI;a+=da){
+                      ellipse(centroid.x+rad*cos(a)-450,centroid.x+rad*sin(a)-250,5,5);
+                  }
+                  
+                  
+                  //corner triangle
+                  fill(174, 110, 78);//shadow
+                  triangle(1200,100,1200+17,100+10,1200+17,100-10);
+                  triangle(1200-20,100,1200+17-20,100+10,1200+17-20,100-10);
+                  
+                  
+                  //rect at br corner
+                  noFill();
+                  strokeWeight(4);
+                  stroke(174, 110, 78);//shadow
+                  rect(1200,560,15,40,1);
+                  rect(1200-25,560+25,15,40,1);
+                  
+                  //rect at top
+                  rect(850,50,20,20,0,0,0,300);
+                  
+                  //rect at bottom
+                  rect(580,720-50,20,20,0,300,0,0);
+                  
+                  //refresh
+                  if (frames == 24){
+                      frames = 0;
+                      firstball = 0;
+                      secondball =0;
+                      netx = 0;
+                      nety = 0;
+                      xlight = 0;
+                      anglex = 0;
+                      angley = 0;
+                      ax = 0;
+                      ay = 0;
+                      patha = 0;
+                      pathb = 0;
+                      pathc = 0;
+                      pathd = 0;
+                  }
+                  }
+              </script>
+              <canvas></canvas>
+            </div>
+
+
+ 
+<div id="DigitalCLOCK" class="clock" onload="showTime()"></div>
+  <script  src="function.js"></script>
+ 
+
+
+
+
+
+
+
+
+
+
+            <div id="clockbox">
+              <!-- clock left -->
+              <script type="application/processing">
+                  void setup(){
+
+                      size(550,850);
+                      rectMode(CENTER);
+                    }
+                    
+                    void draw(){
+                      background(45,23,24);//shadow
+                      //panel
+                      fill(204, 151, 103);//bg
+                      noStroke();
+                      rect(width/2,height/2,500,800);
+                      
+                      //grids horizontal
+                      for (int i = 0; i <= 11; i = i + 1){
+                        strokeWeight(1);
+                        stroke(#d9d8d4,30);
+                        line(25+45.455*i,25,25+45.455*i,825);
+                      }
+                      //grids vertical
+                      for (int i = 0; i <= 7; i = i + 1){
+                        strokeWeight(1);
+                        stroke(#d9d8d4,30);
+                        line(25,25+114.29*i,525,25+114.29*i);
+                      }
+                      
+                      //beginShape();
+                      //vertex(25,25);
+                      //vertex(525,25);
+                      //vertex(525,825);
+                      
+                      //vertex(500,825);
+                      //vertex(500,100);
+                      //vertex(25,100);
+                      
+                      //vertex(25,25);
+                      //endShape();
+                      
+                        //minutes
+                    
+                        // m1
+                      int m = minute();
+                      fill(174, 110, 78);//卡其色中
+                      noStroke();
+                      
+                      if (m >= 1){
+                        
+                        
+                        ellipse(25+45.455,25+114.29,15,15);
+                      }
+                      //m2
+                      if (m >= 2){
+                        
+                        
+                        ellipse(25+45.455*2,25+114.29,15,15);
+                      }
+                        //m3
+                      if (m >= 3){
+                        
+                        
+                        ellipse(25+45.455*3,25+114.29,15,15);
+                      }
+                        //m4
+                      if (m >= 4){
+                        
+                        
+                        ellipse(25+45.455*4,25+114.29,15,15);
+                      }
+                        //m5
+                      if (m >= 5){
+                        
+                        
+                        ellipse(25+45.455*5,25+114.29,15,15);
+                      }
+                        //m6
+                      if (m >= 6){
+                        
+                        
+                        ellipse(25+45.455*6,25+114.29,15,15);
+                      }
+                        //m7
+                      if (m >= 7){
+                        
+                        
+                        ellipse(25+45.455*7,25+114.29,15,15);
+                      }
+                        //m8
+                      if (m >= 8){
+                        
+                        
+                        ellipse(25+45.455*8,25+114.29,15,15);
+                      }
+                        //m9
+                      if (m >= 9){
+                        
+                        
+                        ellipse(25+45.455*9,25+114.29,15,15);
+                      }
+                        //m10
+                      if (m >= 10){
+                        
+                        
+                        ellipse(25+45.455*10,25+114.29,15,15);
+                      }
+                        //m11
+                      if (m >= 11){
+                        
+                        
+                        ellipse(25+45.455,25+114.29*2,15,15);
+                      }
+                        //m12
+                      if (m >= 12){
+                        
+                        
+                        ellipse(25+45.455*2,25+114.29*2,15,15);
+                      }
+                        //m13
+                      if (m >= 13){
+                        
+                        
+                        ellipse(25+45.455*3,25+114.29*2,15,15);
+                      }
+                        //m14
+                      if (m >= 14){
+                        
+                        
+                        ellipse(25+45.455*4,25+114.29*2,15,15);
+                      }
+                        //m15
+                      if (m >= 15){
+                        
+                        
+                        ellipse(25+45.455*5,25+114.29*2,15,15);
+                      }
+                        //m16
+                      if (m >= 16){
+                        
+                        
+                        ellipse(25+45.455*6,25+114.29*2,15,15);
+                      }
+                        //m17
+                      if (m >= 17){
+                        
+                        
+                        ellipse(25+45.455*7,25+114.29*2,15,15);
+                      }
+                        //m18
+                      if (m >= 18){
+                        
+                        
+                        ellipse(25+45.455*8,25+114.29*2,15,15);
+                      }
+                        //m19
+                      if (m >= 19){
+                        
+                        
+                        ellipse(25+45.455*9,25+114.29*2,15,15);
+                      }
+                        //m20
+                      if (m >= 20){
+                        
+                        
+                        ellipse(25+45.455*10,25+114.29*2,15,15);
+                      }
+                        //m21
+                      if (m >= 21){
+                        
+                        
+                        ellipse(25+45.455,25+114.29*3,15,15);
+                      }
+                        //m22
+                      if (m >= 22){
+                        
+                        
+                        ellipse(25+45.455*2,25+114.29*3,15,15);
+                      }
+                        //m23
+                      if (m >= 23){
+                        
+                        
+                        ellipse(25+45.455*3,25+114.29*3,15,15);
+                      }
+                        //m24
+                      if (m >= 24){
+                        
+                        
+                        ellipse(25+45.455*4,25+114.29*3,15,15);
+                      }
+                        //m25
+                      if (m >= 25){
+                        
+                        
+                        ellipse(25+45.455*5,25+114.29*3,15,15);
+                      }
+                        //m26
+                      if (m >= 26){
+                        
+                        
+                        ellipse(25+45.455*6,25+114.29*3,15,15);
+                      }
+                        //m27
+                      if (m >= 27){
+                        
+                        
+                        ellipse(25+45.455*7,25+114.29*3,15,15);
+                      }
+                        //m28
+                      if (m >= 28){
+                        
+                        
+                        ellipse(25+45.455*8,25+114.29*3,15,15);
+                      }
+                        //m29
+                      if (m >= 29){
+                        
+                        
+                        ellipse(25+45.455*9,25+114.29*3,15,15);
+                      }
+                        //m30
+                      if (m >= 30){
+                        
+                        
+                        ellipse(25+45.455*10,25+114.29*3,15,15);
+                      }
+                      //m31
+                      if (m >= 31){
+                        
+                        
+                        ellipse(25+45.455,25+114.29*4,15,15);
+                      }
+                        //m32
+                      if (m >= 32){
+                        
+                        
+                        ellipse(25+45.455*2,25+114.29*4,15,15);
+                      }
+                        //m33
+                      if (m >= 33){
+                        
+                        
+                        ellipse(25+45.455*3,25+114.29*4,15,15);
+                      }
+                        //m34
+                      if (m >= 34){
+                        
+                        
+                        ellipse(25+45.455*4,25+114.29*4,15,15);
+                      }
+                        //m35
+                      if (m >= 35){
+                        
+                        
+                        ellipse(25+45.455*5,25+114.29*4,15,15);
+                      }
+                        //m36
+                      if (m >= 36){
+                        
+                        
+                        ellipse(25+45.455*6,25+114.29*4,15,15);
+                      }
+                        //m37
+                      if (m >= 37){
+                        
+                        
+                        ellipse(25+45.455*7,25+114.29*4,15,15);
+                      }
+                        //m38
+                      if (m >= 38){
+                        
+                        
+                        ellipse(25+45.455*8,25+114.29*4,15,15);
+                      }
+                        //m39
+                      if (m >= 39){
+                        
+                        
+                        ellipse(25+45.455*9,25+114.29*4,15,15);
+                      }
+                        //m40
+                      if (m >= 40){
+                        
+                        
+                        ellipse(25+45.455*10,25+114.29*4,15,15);
+                      }
+                        //m41
+                      if (m >= 41){
+                        
+                        
+                        ellipse(25+45.455,25+114.29*5,15,15);
+                      }
+                        //m42
+                      if (m >= 42){
+                        
+                        
+                        ellipse(25+45.455*2,25+114.29*5,15,15);
+                      }
+                        //m43
+                      if (m >= 43){
+                        
+                        
+                        ellipse(25+45.455*3,25+114.29*5,15,15);
+                      }
+                        //m44
+                      if (m >= 44){
+                        
+                        
+                        ellipse(25+45.455*4,25+114.29*5,15,15);
+                      }
+                        //m45
+                      if (m >= 45){
+                        
+                        
+                        ellipse(25+45.455*5,25+114.29*5,15,15);
+                      }
+                        //m46
+                      if (m >= 46){
+                        
+                        
+                        ellipse(25+45.455*6,25+114.29*5,15,15);
+                      }
+                        //m47
+                      if (m >= 47){
+                        
+                        
+                        ellipse(25+45.455*7,25+114.29*5,15,15);
+                      }
+                        //m48
+                      if (m >= 48){
+                        
+                        
+                        ellipse(25+45.455*8,25+114.29*5,15,15);
+                      }
+                        //m49
+                      if (m >= 49){
+                        
+                        
+                        ellipse(25+45.455*9,25+114.29*5,15,15);
+                      }
+                        //m50
+                      if (m >= 50){
+                        
+                        
+                        ellipse(25+45.455*10,25+114.29*5,15,15);
+                      }
+                        //m51
+                      if (m >= 51){
+                        
+                        
+                        ellipse(25+45.455,25+114.29*6,15,15);
+                      }
+                        //m52
+                      if (m >= 52){
+                        
+                        
+                        ellipse(25+45.455*2,25+114.29*6,15,15);
+                      }
+                        //m53
+                      if (m >= 53){
+                        
+                        
+                        ellipse(25+45.455*3,25+114.29*6,15,15);
+                      }
+                        //m54
+                      if (m >= 54){
+                        
+                        
+                        ellipse(25+45.455*4,25+114.29*6,15,15);
+                      }
+                        //m55
+                      if (m >= 55){
+                        
+                        
+                        ellipse(25+45.455*5,25+114.29*6,15,15);
+                      }
+                        //m56
+                      if (m >= 56){
+                        
+                        
+                        ellipse(25+45.455*6,25+114.29*6,15,15);
+                      }
+                        //m57
+                      if (m >= 57){
+                        
+                        
+                        ellipse(25+45.455*7,25+114.29*6,15,15);
+                      }
+                        //m58
+                      if (m >= 58){
+                        
+                        
+                        ellipse(25+45.455*8,25+114.29*6,15,15);
+                      }
+                        //m59
+                      if (m >= 59){
+                        
+                        
+                        ellipse(25+45.455*9,25+114.29*6,15,15);
+                      }
+                        //m60
+                      if (m >= 60){
+                        
+                        
+                        ellipse(25+45.455*10,25+114.29*6,15,15);
+                      }
+                      
+                      
+                      //seconds
+                      fill(245, 245, 221);//卡其色轻
+                      // s1
+                      int s = second();
+                      if (s >= 1){
+                        
+                        
+                        ellipse(25+45.455,25+114.29,10,10);
+                      }
+                      //s2
+                      if (s >= 2){
+                        
+                        
+                        ellipse(25+45.455*2,25+114.29,10,10);
+                      }
+                        //s3
+                      if (s >= 3){
+                        
+                        
+                        ellipse(25+45.455*3,25+114.29,10,10);
+                      }
+                        //s4
+                      if (s >= 4){
+                        
+                        
+                        ellipse(25+45.455*4,25+114.29,10,10);
+                      }
+                        //s5
+                      if (s >= 5){
+                        
+                        
+                        ellipse(25+45.455*5,25+114.29,10,10);
+                      }
+                        //s6
+                      if (s >= 6){
+                        
+                        
+                        ellipse(25+45.455*6,25+114.29,10,10);
+                      }
+                        //s7
+                      if (s >= 7){
+                        
+                        
+                        ellipse(25+45.455*7,25+114.29,10,10);
+                      }
+                        //s8
+                      if (s >= 8){
+                        
+                        
+                        ellipse(25+45.455*8,25+114.29,10,10);
+                      }
+                        //s9
+                      if (s >= 9){
+                        
+                        
+                        ellipse(25+45.455*9,25+114.29,10,10);
+                      }
+                        //s10
+                      if (s >= 10){
+                        
+                        
+                        ellipse(25+45.455*10,25+114.29,10,10);
+                      }
+                        //s11
+                      if (s >= 11){
+                        
+                        
+                        ellipse(25+45.455,25+114.29*2,10,10);
+                      }
+                        //s12
+                      if (s >= 12){
+                        
+                        
+                        ellipse(25+45.455*2,25+114.29*2,10,10);
+                      }
+                        //s13
+                      if (s >= 13){
+                        
+                        
+                        ellipse(25+45.455*3,25+114.29*2,10,10);
+                      }
+                        //s14
+                      if (s >= 14){
+                        
+                        
+                        ellipse(25+45.455*4,25+114.29*2,10,10);
+                      }
+                        //s15
+                      if (s >= 15){
+                        
+                        
+                        ellipse(25+45.455*5,25+114.29*2,10,10);
+                      }
+                        //s16
+                      if (s >= 16){
+                        
+                        
+                        ellipse(25+45.455*6,25+114.29*2,10,10);
+                      }
+                        //s17
+                      if (s >= 17){
+                        
+                        
+                        ellipse(25+45.455*7,25+114.29*2,10,10);
+                      }
+                        //s18
+                      if (s >= 18){
+                        
+                        
+                        ellipse(25+45.455*8,25+114.29*2,10,10);
+                      }
+                        //s19
+                      if (s >= 19){
+                        
+                        
+                        ellipse(25+45.455*9,25+114.29*2,10,10);
+                      }
+                        //s20
+                      if (s >= 20){
+                        
+                        
+                        ellipse(25+45.455*10,25+114.29*2,10,10);
+                      }
+                        //s21
+                      if (s >= 21){
+                        
+                        
+                        ellipse(25+45.455,25+114.29*3,10,10);
+                      }
+                        //s22
+                      if (s >= 22){
+                        
+                        
+                        ellipse(25+45.455*2,25+114.29*3,10,10);
+                      }
+                        //s23
+                      if (s >= 23){
+                        
+                        
+                        ellipse(25+45.455*3,25+114.29*3,10,10);
+                      }
+                        //s24
+                      if (s >= 24){
+                        
+                        
+                        ellipse(25+45.455*4,25+114.29*3,10,10);
+                      }
+                        //s25
+                      if (s >= 25){
+                        
+                        
+                        ellipse(25+45.455*5,25+114.29*3,10,10);
+                      }
+                        //s26
+                      if (s >= 26){
+                        
+                        
+                        ellipse(25+45.455*6,25+114.29*3,10,10);
+                      }
+                        //s27
+                      if (s >= 27){
+                        
+                        
+                        ellipse(25+45.455*7,25+114.29*3,10,10);
+                      }
+                        //s28
+                      if (s >= 28){
+                        
+                        
+                        ellipse(25+45.455*8,25+114.29*3,10,10);
+                      }
+                        //s29
+                      if (s >= 29){
+                        
+                        
+                        ellipse(25+45.455*9,25+114.29*3,10,10);
+                      }
+                        //s30
+                      if (s >= 30){
+                        
+                        
+                        ellipse(25+45.455*10,25+114.29*3,10,10);
+                      }
+                      //s31
+                      if (s >= 31){
+                        
+                        
+                        ellipse(25+45.455,25+114.29*4,10,10);
+                      }
+                        //s32
+                      if (s >= 32){
+                        
+                        
+                        ellipse(25+45.455*2,25+114.29*4,10,10);
+                      }
+                        //s33
+                      if (s >= 33){
+                        
+                        
+                        ellipse(25+45.455*3,25+114.29*4,10,10);
+                      }
+                        //s34
+                      if (s >= 34){
+                        
+                        
+                        ellipse(25+45.455*4,25+114.29*4,10,10);
+                      }
+                        //s35
+                      if (s >= 35){
+                        
+                        
+                        ellipse(25+45.455*5,25+114.29*4,10,10);
+                      }
+                        //s36
+                      if (s >= 36){
+                        
+                        
+                        ellipse(25+45.455*6,25+114.29*4,10,10);
+                      }
+                        //s37
+                      if (s >= 37){
+                        
+                        
+                        ellipse(25+45.455*7,25+114.29*4,10,10);
+                      }
+                        //s38
+                      if (s >= 38){
+                        
+                        
+                        ellipse(25+45.455*8,25+114.29*4,10,10);
+                      }
+                        //s39
+                      if (s >= 39){
+                        
+                        
+                        ellipse(25+45.455*9,25+114.29*4,10,10);
+                      }
+                        //s40
+                      if (s >= 40){
+                        
+                        
+                        ellipse(25+45.455*10,25+114.29*4,10,10);
+                      }
+                        //s41
+                      if (s >= 41){
+                        
+                        
+                        ellipse(25+45.455,25+114.29*5,10,10);
+                      }
+                        //s42
+                      if (s >= 42){
+                        
+                        
+                        ellipse(25+45.455*2,25+114.29*5,10,10);
+                      }
+                        //s43
+                      if (s >= 43){
+                        
+                        
+                        ellipse(25+45.455*3,25+114.29*5,10,10);
+                      }
+                        //s44
+                      if (s >= 44){
+                        
+                        
+                        ellipse(25+45.455*4,25+114.29*5,10,10);
+                      }
+                        //s45
+                      if (s >= 45){
+                        
+                        
+                        ellipse(25+45.455*5,25+114.29*5,10,10);
+                      }
+                        //s46
+                      if (s >= 46){
+                        
+                        
+                        ellipse(25+45.455*6,25+114.29*5,10,10);
+                      }
+                        //s47
+                      if (s >= 47){
+                        
+                        
+                        ellipse(25+45.455*7,25+114.29*5,10,10);
+                      }
+                        //s48
+                      if (s >= 48){
+                        
+                        
+                        ellipse(25+45.455*8,25+114.29*5,10,10);
+                      }
+                        //s49
+                      if (s >= 49){
+                        
+                        
+                        ellipse(25+45.455*9,25+114.29*5,10,10);
+                      }
+                        //s50
+                      if (s >= 50){
+                        
+                        
+                        ellipse(25+45.455*10,25+114.29*5,10,10);
+                      }
+                        //s51
+                      if (s >= 51){
+                        
+                        
+                        ellipse(25+45.455,25+114.29*6,10,10);
+                      }
+                        //s52
+                      if (s >= 52){
+                        
+                        
+                        ellipse(25+45.455*2,25+114.29*6,10,10);
+                      }
+                        //s53
+                      if (s >= 53){
+                        
+                        
+                        ellipse(25+45.455*3,25+114.29*6,10,10);
+                      }
+                        //s54
+                      if (s >= 54){
+                        
+                        
+                        ellipse(25+45.455*4,25+114.29*6,10,10);
+                      }
+                        //s55
+                      if (s >= 55){
+                        
+                        
+                        ellipse(25+45.455*5,25+114.29*6,10,10);
+                      }
+                        //s56
+                      if (s >= 56){
+                        
+                        
+                        ellipse(25+45.455*6,25+114.29*6,10,10);
+                      }
+                        //s57
+                      if (s >= 57){
+                        
+                        
+                        ellipse(25+45.455*7,25+114.29*6,10,10);
+                      }
+                        //s58
+                      if (s >= 58){
+                        
+                        
+                        ellipse(25+45.455*8,25+114.29*6,10,10);
+                      }
+                        //s59
+                      if (s >= 59){
+                        
+                        
+                        ellipse(25+45.455*9,25+114.29*6,10,10);
+                      }
+                        //s60
+                      if (s >= 60){
+                        
+                        
+                        ellipse(25+45.455*10,25+114.29*6,10,10);
+                      }
+                      
+                      
+                          //hour
+                      int h = hour();
+                          //h1
+                      if (h >= 1){
+                        strokeWeight(1);
+                        stroke(174, 110, 78);//shadow
+                        
+                        line(25+45.455,25+114.29,width/2,height/2);
+                      }
+                    
+                        //h2
+                      if (h >= 2){
+                        
+                        
+                        line(25+45.455*4,25+114.29,width/2,height/2);
+                      }
+                    
+                        //h3
+                      if (h >= 3){
+                        
+                        
+                        line(25+45.455*7,25+114.29,width/2,height/2);
+                      }
+                    
+                        //h4
+                      if (h >= 4){
+                        
+                        
+                        line(25+45.455*10,25+114.29,width/2,height/2);
+                      }
+                        //h5
+                      if (h >= 5){
+                        
+                        
+                        line(25+45.455,25+114.29*2,width/2,height/2);
+                      }
+                    
+                      //h6
+                      if (h >= 6){
+                        
+                        
+                        line(25+45.455*4,25+114.29*2,width/2,height/2);
+                      }
+                    
+                      //h7
+                      if (h >= 7){
+                        
+                        
+                        line(25+45.455*7,25+114.29*2,width/2,height/2);
+                      }
+                    
+                    
+                      //h8
+                      if (h >= 8){
+                        
+                        line(25+45.455*10,25+114.29*2,width/2,height/2);
+                      }
+                    
+                      //h9
+                      if (h >= 9){
+                        
+                        
+                        line(25+45.455,25+114.29*3,width/2,height/2);
+                      }
+                    
+                      //h10
+                      if (h >= 10){
+                        
+                        
+                        line(25+45.455*3,25+114.29*3,width/2,height/2);
+                      }
+                    
+                      //h11
+                      if (h >= 11){
+                        
+                        
+                        line(25+45.455*8,25+114.29*3,width/2,height/2);
+                      }
+                      //h12
+                      if (h >= 12){
+                        
+                        
+                        line(25+45.455*10,25+114.29*3,width/2,height/2);
+                      }
+                    
+                      //h13
+                      if (h >= 13){
+                        
+                        
+                        line(25+45.455*1,25+114.29*4,width/2,height/2);
+                      }
+                    
+                      //h14
+                      if (h >= 14){
+                        
+                        
+                        line(25+45.455*3,25+114.29*4,width/2,height/2);
+                      }
+                    
+                      //h15
+                      if (h >= 15){
+                        
+                        
+                        line(25+45.455*8,25+114.29*4,width/2,height/2);
+                      }
+                        //h16
+                      if (h >= 16){
+                        
+                        
+                        line(25+45.455*10,25+114.29*4,width/2,height/2);
+                      }
+                    
+                      //h17
+                      if (h >= 17){
+                        
+                        
+                        line(25+45.455*1,25+114.29*5,width/2,height/2);
+                      }
+                    
+                      //h18
+                      if (h >= 18){
+                        
+                        
+                        line(25+45.455*4,25+114.29*5,width/2,height/2);
+                      }
+                    
+                      //h19
+                      if (h >= 19){
+                        
+                        
+                        line(25+45.455*7,25+114.29*5,width/2,height/2);
+                      }
+                        //h20
+                      if (h >= 20){
+                        
+                        
+                        line(25+45.455*10,25+114.29*5,width/2,height/2);
+                      }
+                    
+                      //h21
+                      if (h >= 21){
+                        
+                        
+                        line(25+45.455*1,25+114.29*6,width/2,height/2);
+                      }
+                      
+                      //h22
+                      if (h >= 22){
+                        
+                        
+                        line(25+45.455*4,25+114.29*6,width/2,height/2);
+                      }
+                    
+                      //h23
+                      if (h >= 23){
+                        
+                        
+                        line(25+45.455*7,25+114.29*6,width/2,height/2);
+                      }
+                    }
+
+              </script>
+              <canvas id="clock"></canvas>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <!-- clock right -->
+              <script type="application/processing">
+                void setup(){
+
+                  size(550,850);
+                  rectMode(CENTER);
+                }
+                
+                void draw(){
+                  background(45,23,24);//卡其色深
+                  
+                  ////panel shadow
+                  //fill(#3a3834,99);//bg color
+                  //noStroke();
+                  
+                  //beginShape();
+                  //vertex(25,25);
+                  //vertex(525,25);
+                  //vertex(550,60);
+                  //vertex(550,850);
+                  
+                  //vertex(45,850);
+                  //vertex(25,825);
+                  //vertex(25,25);
+                  
+                  //endShape();
+                  
+                  //panel
+                  
+                  fill(204, 151, 103);//
+                  noStroke();
+                  rect(width/2,height/2,500,800);
+                  
+                  //grids horizontal
+                  for (int i = 0; i <= 11; i = i + 1){
+                    strokeWeight(1);
+                    stroke(#d9d8d4,30);
+                    line(25+45.455*i,25,25+45.455*i,825);
+                  }
+                  //grids vertical
+                  for (int i = 0; i <= 7; i = i + 1){
+                    strokeWeight(1);
+                    stroke(#d9d8d4,30);
+                    line(25,25+114.29*i,525,25+114.29*i);
+                  }
+                  
+                  ////panel outline
+                  //noFill();
+                  //stroke(#7f7a72);
+                  //strokeWeight(0.1);
+                  //rect(width/2,height/2,500,800);
+                  
+                  
+                  
+                  
+                  
+                  
+                      //hour
+                  strokeWeight(1);
+                  stroke(174, 110, 78);//
+                  fill(174, 110, 78);
+                  int h = hour();
+                      //h1
+                    rectMode(CENTER);
+                  if (h == 1){
+                    rect(25+45.455,25+114.29,45.455*2,114.29*2);
+                  }
+                
+                    //h2
+                  if (h == 2){
+                    
+                    
+                    rect(25+45.455*4,25+114.29,45.455*2,114.29*2);
+                  }
+                
+                    //h3
+                  if (h == 3){
+                    
+                    
+                    rect(25+45.455*7,25+114.29,45.455*2,114.29*2);
+                  }
+                
+                    //h4
+                  if (h == 4){
+                    
+                    
+                    rect(25+45.455*10,25+114.29,45.455*2,114.29*2);
+                  }
+                    //h5
+                  if (h == 5){
+                    
+                    
+                    rect(25+45.455,25+114.29*2,45.455*2,114.29*2);
+                  }
+                
+                  //h6
+                  if (h == 6){
+                    
+                    
+                    rect(25+45.455*4,25+114.29*2,45.455*2,114.29*2);
+                  }
+                
+                  //h7
+                  if (h == 7){
+                    
+                    
+                    rect(25+45.455*7,25+114.29*2,45.455*2,114.29*2);
+                  }
+                
+                
+                  //h8
+                  if (h == 8){
+                    
+                    rect(25+45.455*10,25+114.29*2,45.455*2,114.29*2);
+                  }
+                
+                  //h9
+                  if (h == 9){
+                    
+                    
+                    rect(25+45.455,25+114.29*3,45.455*2,114.29*2);
+                  }
+                
+                  //h10
+                  if (h == 10){
+                    
+                    
+                    rect(25+45.455*4,25+114.29*3,45.455*2,114.29*2);
+                  }
+                
+                  //h11
+                  if (h == 11){
+                    
+                    
+                    rect(25+45.455*7,25+114.29*3,45.455*2,114.29*2);
+                  }
+                  //h12
+                  if (h == 12){
+                    
+                    
+                    rect(25+45.455*10,25+114.29*3,45.455*2,114.29*2);
+                  }
+                
+                  //h13
+                  if (h == 13){
+                    
+                    
+                    rect(25+45.455*1,25+114.29*4,45.455*2,114.29*2);
+                  }
+                
+                  //h14
+                  if (h == 14){
+                    
+                    
+                    rect(25+45.455*4,25+114.29*4,45.455*2,114.29*2);
+                  }
+                
+                  //h15
+                  if (h == 15){
+                    
+                    
+                    rect(25+45.455*7,25+114.29*4,45.455*2,114.29*2);
+                  }
+                    //h16
+                  if (h == 16){
+                    
+                    
+                    rect(25+45.455*10,25+114.29*4,45.455*2,114.29*2);
+                  }
+                
+                  //h17
+                  if (h == 17){
+                    
+                    
+                    rect(25+45.455*1,25+114.29*5,45.455*2,114.29*2);
+                  }
+                
+                  //h18
+                  if (h == 18){
+                    
+                    
+                    rect(25+45.455*4,25+114.29*5,45.455*2,114.29*2);
+                  }
+                
+                  //h19
+                  if (h == 19){
+                    
+                    
+                    rect(25+45.455*7,25+114.29*5,45.455*2,114.29*2);
+                  }
+                    //h20
+                  if (h == 20){
+                    
+                    
+                    rect(25+45.455*10,25+114.29*5,45.455*2,114.29*2);
+                  }
+                
+                  //h21
+                  if (h == 21){
+                    
+                    
+                    rect(25+45.455*1,25+114.29*6,45.455*2,114.29*2);
+                  }
+                  
+                  //h22
+                  if (h == 22){
+                    
+                    
+                    rect(25+45.455*4,25+114.29*6,45.455*2,114.29*2);
+                  }
+                
+                  //h23
+                  if (h == 23){
+                    
+                    
+                    rect(25+45.455*7,25+114.29*6,45.455*2,114.29*2);
+                  }
+                  
+                    //seconds
+                  strokeWeight(1);
+                  stroke(245, 245, 221);//
+                  // s1
+                  int s = second();
+                  if (s >= 1){
+                    
+                    line(25+45.455,25+114.29,25+45.455*2,25+114.29);
+                  }
+                  //s2
+                  if (s >= 2){
+                    
+                    
+                    line(25+45.455*2,25+114.29,25+45.455*3,25+114.29);
+                  }
+                    //s3
+                  if (s >= 3){
+                    
+                    
+                    line(25+45.455*3,25+114.29,25+45.455*4,25+114.29);
+                  }
+                    //s4
+                  if (s >= 4){
+                    
+                    
+                    line(25+45.455*4,25+114.29,25+45.455*5,25+114.29);
+                  }
+                    //s5
+                  if (s >= 5){
+                    
+                    
+                    line(25+45.455*5,25+114.29,25+45.455*6,25+114.29);
+                  }
+                    //s6
+                  if (s >= 6){
+                    
+                    
+                    line(25+45.455*6,25+114.29,25+45.455*7,25+114.29);
+                  }
+                    //s7
+                  if (s >= 7){
+                    
+                    
+                    line(25+45.455*7,25+114.29,25+45.455*8,25+114.29);
+                  }
+                    //s8
+                  if (s >= 8){
+                    
+                    
+                    line(25+45.455*8,25+114.29,25+45.455*9,25+114.29);
+                  }
+                    //s9
+                  if (s >= 9){
+                    
+                    
+                    line(25+45.455*9,25+114.29,25+45.455*10,25+114.29);
+                  }
+                    //s10
+                  if (s >= 10){
+                    
+                
+                
+                  }
+                    //s11
+                  if (s >= 11){
+                    
+                    
+                    line(25+45.455,25+114.29*2,25+45.455*2,25+114.29*2);
+                  }
+                    //s12
+                  if (s >= 12){
+                    
+                    
+                    line(25+45.455*2,25+114.29*2,25+45.455*3,25+114.29*2);
+                  }
+                    //s13
+                  if (s >= 13){
+                    
+                    
+                    line(25+45.455*3,25+114.29*2,25+45.455*4,25+114.29*2);
+                  }
+                    //s14
+                  if (s >= 14){
+                    
+                    
+                    line(25+45.455*4,25+114.29*2,25+45.455*5,25+114.29*2);
+                  }
+                    //s15
+                  if (s >= 15){
+                    
+                    
+                    line(25+45.455*5,25+114.29*2,25+45.455*6,25+114.29*2);
+                  }
+                    //s16
+                  if (s >= 16){
+                    
+                    
+                    line(25+45.455*6,25+114.29*2,25+45.455*7,25+114.29*2);
+                  }
+                    //s17
+                  if (s >= 17){
+                    
+                    
+                    line(25+45.455*7,25+114.29*2,25+45.455*8,25+114.29*2);
+                  }
+                    //s18
+                  if (s >= 18){
+                    
+                    
+                    line(25+45.455*8,25+114.29*2,25+45.455*9,25+114.29*2);
+                  }
+                    //s19
+                  if (s >= 19){
+                    
+                    
+                    line(25+45.455*9,25+114.29*2,25+45.455*10,25+114.29*2);
+                  }
+                    //s20
+                  if (s >= 20){
+                    
+                
+                
+                  }
+                    //s21
+                  if (s >= 21){
+                    
+                    
+                    line(25+45.455,25+114.29*3,25+45.455*2,25+114.29*3);
+                  }
+                    //s22
+                  if (s >= 22){
+                    
+                    
+                    line(25+45.455*2,25+114.29*3,25+45.455*3,25+114.29*3);
+                  }
+                    //s23
+                  if (s >= 23){
+                    
+                    
+                    line(25+45.455*3,25+114.29*3,25+45.455*4,25+114.29*3);
+                  }
+                    //s24
+                  if (s >= 24){
+                    
+                    
+                    line(25+45.455*4,25+114.29*3,25+45.455*5,25+114.29*3);
+                  }
+                    //s25
+                  if (s >= 25){
+                    
+                    
+                    line(25+45.455*5,25+114.29*3,25+45.455*6,25+114.29*3);
+                  }
+                    //s26
+                  if (s >= 26){
+                    
+                    
+                    line(25+45.455*6,25+114.29*3,25+45.455*7,25+114.29*3);
+                  }
+                    //s27
+                  if (s >= 27){
+                    
+                    
+                    line(25+45.455*7,25+114.29*3,25+45.455*8,25+114.29*3);
+                  }
+                    //s28
+                  if (s >= 28){
+                    
+                    
+                    line(25+45.455*8,25+114.29*3,25+45.455*9,25+114.29*3);
+                  }
+                    //s29
+                  if (s >= 29){
+                    
+                    
+                    line(25+45.455*9,25+114.29*3,25+45.455*10,25+114.29*3);
+                  }
+                    //s30
+                  if (s >= 30){
+                    
+                
+                
+                  }
+                  //s31
+                  if (s >= 31){
+                    
+                    
+                    line(25+45.455,25+114.29*4,25+45.455*2,25+114.29*4);
+                  }
+                    //s32
+                  if (s >= 32){
+                    
+                    
+                    line(25+45.455*2,25+114.29*4,25+45.455*3,25+114.29*4);
+                  }
+                    //s33
+                  if (s >= 33){
+                    
+                    
+                    line(25+45.455*3,25+114.29*4,25+45.455*4,25+114.29*4);
+                  }
+                    //s34
+                  if (s >= 34){
+                    
+                    
+                    line(25+45.455*4,25+114.29*4,25+45.455*5,25+114.29*4);
+                  }
+                    //s35
+                  if (s >= 35){
+                    
+                    
+                    line(25+45.455*5,25+114.29*4,25+45.455*6,25+114.29*4);
+                  }
+                    //s36
+                  if (s >= 36){
+                    
+                    
+                    line(25+45.455*6,25+114.29*4,25+45.455*7,25+114.29*4);
+                  }
+                    //s37
+                  if (s >= 37){
+                    
+                    
+                    line(25+45.455*7,25+114.29*4,25+45.455*8,25+114.29*4);
+                  }
+                    //s38
+                  if (s >= 38){
+                    
+                    
+                    line(25+45.455*8,25+114.29*4,25+45.455*9,25+114.29*4);
+                  }
+                    //s39
+                  if (s >= 39){
+                    
+                    
+                    line(25+45.455*9,25+114.29*4,25+45.455*10,25+114.29*4);
+                  }
+                    //s40
+                  if (s >= 40){
+                    
+                
+                
+                  }
+                    //s41
+                  if (s >= 41){
+                    
+                    
+                    line(25+45.455,25+114.29*5,25+45.455*2,25+114.29*5);
+                  }
+                    //s42
+                  if (s >= 42){
+                    
+                    
+                    line(25+45.455*2,25+114.29*5,25+45.455*3,25+114.29*5);
+                  }
+                    //s43
+                  if (s >= 43){
+                    
+                    
+                    line(25+45.455*3,25+114.29*5,25+45.455*4,25+114.29*5);
+                  }
+                    //s44
+                  if (s >= 44){
+                    
+                    
+                    line(25+45.455*4,25+114.29*5,25+45.455*5,25+114.29*5);
+                  }
+                    //s45
+                  if (s >= 45){
+                    
+                    
+                    line(25+45.455*5,25+114.29*5,25+45.455*6,25+114.29*5);
+                  }
+                    //s46
+                  if (s >= 46){
+                    
+                    
+                    line(25+45.455*6,25+114.29*5,25+45.455*7,25+114.29*5);
+                  }
+                    //s47
+                  if (s >= 47){
+                    
+                    
+                    line(25+45.455*7,25+114.29*5,25+45.455*8,25+114.29*5);
+                  }
+                    //s48
+                  if (s >= 48){
+                    
+                    
+                    line(25+45.455*8,25+114.29*5,25+45.455*9,25+114.29*5);
+                  }
+                    //s49
+                  if (s >= 49){
+                    
+                    
+                    line(25+45.455*9,25+114.29*5,25+45.455*10,25+114.29*5);
+                  }
+                    //s50
+                  if (s >= 50){
+                    
+                    
+                
+                  }
+                    //s51
+                  if (s >= 51){
+                    
+                    
+                    line(25+45.455,25+114.29*6,25+45.455*2,25+114.29*6);
+                  }
+                    //s52
+                  if (s >= 52){
+                    
+                    
+                    line(25+45.455*2,25+114.29*6,25+45.455*3,25+114.29*6);
+                  }
+                    //s53
+                  if (s >= 53){
+                    
+                    
+                    line(25+45.455*3,25+114.29*6,25+45.455*4,25+114.29*6);
+                  }
+                    //s54
+                  if (s >= 54){
+                    
+                    
+                    line(25+45.455*4,25+114.29*6,25+45.455*5,25+114.29*6);
+                  }
+                    //s55
+                  if (s >= 55){
+                    
+                    
+                    line(25+45.455*5,25+114.29*6,25+45.455*6,25+114.29*6);
+                  }
+                    //s56
+                  if (s >= 56){
+                    
+                    
+                    line(25+45.455*6,25+114.29*6,25+45.455*7,25+114.29*6);
+                  }
+                    //s57
+                  if (s >= 57){
+                    
+                    
+                    line(25+45.455*7,25+114.29*6,25+45.455*8,25+114.29*6);
+                  }
+                    //s58
+                  if (s >= 58){
+                    
+                    
+                    line(25+45.455*8,25+114.29*6,25+45.455*9,25+114.29*6);
+                  }
+                    //s59
+                  if (s >= 59){
+                    
+                    
+                    line(25+45.455*9,25+114.29*6,25+45.455*10,25+114.29*6);
+                  }
+                    //s60
+                  if (s >= 60){
+                    
+                    
+                    line(25+45.455*10,25+114.29*6,25+45.455*9,25+114.29*6);
+                  }
+                  
+                  
+                  
+                    //minutes
+                
+                    // m1
+                  int m = minute();
+                  strokeWeight(1);
+                  stroke(245, 245, 221);//
+                  fill(174, 110, 78);//
+                  
+                  
+                  if (m >= 1){
+                    
+                    
+                    ellipse(25+45.455,25+114.29,10,10);
+                  }
+                  //m2
+                  if (m >= 2){
+                    
+                    
+                    ellipse(25+45.455*2,25+114.29,10,10);
+                  }
+                    //m3
+                  if (m >= 3){
+                    
+                    
+                    ellipse(25+45.455*3,25+114.29,10,10);
+                  }
+                    //m4
+                  if (m >= 4){
+                    
+                    
+                    ellipse(25+45.455*4,25+114.29,10,10);
+                  }
+                    //m5
+                  if (m >= 5){
+                    
+                    
+                    ellipse(25+45.455*5,25+114.29,10,10);
+                  }
+                    //m6
+                  if (m >= 6){
+                    
+                    
+                    ellipse(25+45.455*6,25+114.29,10,10);
+                  }
+                    //m7
+                  if (m >= 7){
+                    
+                    
+                    ellipse(25+45.455*7,25+114.29,10,10);
+                  }
+                    //m8
+                  if (m >= 8){
+                    
+                    
+                    ellipse(25+45.455*8,25+114.29,10,10);
+                  }
+                    //m9
+                  if (m >= 9){
+                    
+                    
+                    ellipse(25+45.455*9,25+114.29,10,10);
+                  }
+                    //m10
+                  if (m >= 10){
+                    
+                    
+                    ellipse(25+45.455*10,25+114.29,10,10);
+                  }
+                    //m11
+                  if (m >= 11){
+                    
+                    
+                    ellipse(25+45.455,25+114.29*2,10,10);
+                  }
+                    //m12
+                  if (m >= 12){
+                    
+                    
+                    ellipse(25+45.455*2,25+114.29*2,10,10);
+                  }
+                    //m13
+                  if (m >= 13){
+                    
+                    
+                    ellipse(25+45.455*3,25+114.29*2,10,10);
+                  }
+                    //m14
+                  if (m >= 14){
+                    
+                    
+                    ellipse(25+45.455*4,25+114.29*2,10,10);
+                  }
+                    //m15
+                  if (m >= 15){
+                    
+                    
+                    ellipse(25+45.455*5,25+114.29*2,10,10);
+                  }
+                    //m16
+                  if (m >= 16){
+                    
+                    
+                    ellipse(25+45.455*6,25+114.29*2,10,10);
+                  }
+                    //m17
+                  if (m >= 17){
+                    
+                    
+                    ellipse(25+45.455*7,25+114.29*2,10,10);
+                  }
+                    //m18
+                  if (m >= 18){
+                    
+                    
+                    ellipse(25+45.455*8,25+114.29*2,10,10);
+                  }
+                    //m19
+                  if (m >= 19){
+                    
+                    
+                    ellipse(25+45.455*9,25+114.29*2,10,10);
+                  }
+                    //m20
+                  if (m >= 20){
+                    
+                    
+                    ellipse(25+45.455*10,25+114.29*2,10,10);
+                  }
+                    //m21
+                  if (m >= 21){
+                    
+                    
+                    ellipse(25+45.455,25+114.29*3,10,10);
+                  }
+                    //m22
+                  if (m >= 22){
+                    
+                    
+                    ellipse(25+45.455*2,25+114.29*3,10,10);
+                  }
+                    //m23
+                  if (m >= 23){
+                    
+                    
+                    ellipse(25+45.455*3,25+114.29*3,10,10);
+                  }
+                    //m24
+                  if (m >= 24){
+                    
+                    
+                    ellipse(25+45.455*4,25+114.29*3,10,10);
+                  }
+                    //m25
+                  if (m >= 25){
+                    
+                    
+                    ellipse(25+45.455*5,25+114.29*3,10,10);
+                  }
+                    //m26
+                  if (m >= 26){
+                    
+                    
+                    ellipse(25+45.455*6,25+114.29*3,10,10);
+                  }
+                    //m27
+                  if (m >= 27){
+                    
+                    
+                    ellipse(25+45.455*7,25+114.29*3,10,10);
+                  }
+                    //m28
+                  if (m >= 28){
+                    
+                    
+                    ellipse(25+45.455*8,25+114.29*3,10,10);
+                  }
+                    //m29
+                  if (m >= 29){
+                    
+                    
+                    ellipse(25+45.455*9,25+114.29*3,10,10);
+                  }
+                    //m30
+                  if (m >= 30){
+                    
+                    
+                    ellipse(25+45.455*10,25+114.29*3,10,10);
+                  }
+                  //m31
+                  if (m >= 31){
+                    
+                    
+                    ellipse(25+45.455,25+114.29*4,10,10);
+                  }
+                    //m32
+                  if (m >= 32){
+                    
+                    
+                    ellipse(25+45.455*2,25+114.29*4,10,10);
+                  }
+                    //m33
+                  if (m >= 33){
+                    
+                    
+                    ellipse(25+45.455*3,25+114.29*4,10,10);
+                  }
+                    //m34
+                  if (m >= 34){
+                    
+                    
+                    ellipse(25+45.455*4,25+114.29*4,10,10);
+                  }
+                    //m35
+                  if (m >= 35){
+                    
+                    
+                    ellipse(25+45.455*5,25+114.29*4,10,10);
+                  }
+                    //m36
+                  if (m >= 36){
+                    
+                    
+                    ellipse(25+45.455*6,25+114.29*4,10,10);
+                  }
+                    //m37
+                  if (m >= 37){
+                    
+                    
+                    ellipse(25+45.455*7,25+114.29*4,10,10);
+                  }
+                    //m38
+                  if (m >= 38){
+                    
+                    
+                    ellipse(25+45.455*8,25+114.29*4,10,10);
+                  }
+                    //m39
+                  if (m >= 39){
+                    
+                    
+                    ellipse(25+45.455*9,25+114.29*4,10,10);
+                  }
+                    //m40
+                  if (m >= 40){
+                    
+                    
+                    ellipse(25+45.455*10,25+114.29*4,10,10);
+                  }
+                    //m41
+                  if (m >= 41){
+                    
+                    
+                    ellipse(25+45.455,25+114.29*5,10,10);
+                  }
+                    //m42
+                  if (m >= 42){
+                    
+                    
+                    ellipse(25+45.455*2,25+114.29*5,10,10);
+                  }
+                    //m43
+                  if (m >= 43){
+                    
+                    
+                    ellipse(25+45.455*3,25+114.29*5,10,10);
+                  }
+                    //m44
+                  if (m >= 44){
+                    
+                    
+                    ellipse(25+45.455*4,25+114.29*5,10,10);
+                  }
+                    //m45
+                  if (m >= 45){
+                    
+                    
+                    ellipse(25+45.455*5,25+114.29*5,10,10);
+                  }
+                    //m46
+                  if (m >= 46){
+                    
+                    
+                    ellipse(25+45.455*6,25+114.29*5,10,10);
+                  }
+                    //m47
+                  if (m >= 47){
+                    
+                    
+                    ellipse(25+45.455*7,25+114.29*5,10,10);
+                  }
+                    //m48
+                  if (m >= 48){
+                    
+                    
+                    ellipse(25+45.455*8,25+114.29*5,10,10);
+                  }
+                    //m49
+                  if (m >= 49){
+                    
+                    
+                    ellipse(25+45.455*9,25+114.29*5,10,10);
+                  }
+                    //m50
+                  if (m >= 50){
+                    
+                    
+                    ellipse(25+45.455*10,25+114.29*5,10,10);
+                  }
+                    //m51
+                  if (m >= 51){
+                    
+                    
+                    ellipse(25+45.455,25+114.29*6,10,10);
+                  }
+                    //m52
+                  if (m >= 52){
+                    
+                    
+                    ellipse(25+45.455*2,25+114.29*6,10,10);
+                  }
+                    //m53
+                  if (m >= 53){
+                    
+                    
+                    ellipse(25+45.455*3,25+114.29*6,10,10);
+                  }
+                    //m54
+                  if (m >= 54){
+                    
+                    
+                    ellipse(25+45.455*4,25+114.29*6,10,10);
+                  }
+                    //m55
+                  if (m >= 55){
+                    
+                    
+                    ellipse(25+45.455*5,25+114.29*6,10,10);
+                  }
+                    //m56
+                  if (m >= 56){
+                    
+                    
+                    ellipse(25+45.455*6,25+114.29*6,10,10);
+                  }
+                    //m57
+                  if (m >= 57){
+                    
+                    
+                    ellipse(25+45.455*7,25+114.29*6,10,10);
+                  }
+                    //m58
+                  if (m >= 58){
+                    
+                    
+                    ellipse(25+45.455*8,25+114.29*6,10,10);
+                  }
+                    //m59
+                  if (m >= 59){
+                    
+                    
+                    ellipse(25+45.455*9,25+114.29*6,10,10);
+                  }
+                    //m60
+                  if (m >= 60){
+                    
+                    
+                    ellipse(25+45.455*10,25+114.29*6,10,10);
+                  }
+                  
+                }
+              </script>
+              <canvas id="clock"></canvas>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  <!-- draw-->
+                <div class="panel">
+                  <script type="application/processing">
+                    void setup() {
+                      size(820,200);
+                      background(204, 151, 103);//卡其色中
+                    }
+                    
+                    void draw() {
+                      if (keyPressed && key == 'e') {//eraser 1
+                        noStroke();
+                        fill(204, 151, 103);//卡其色中
+                        ellipse(mouseX, mouseY,60,60);
+                      }
+                      
+                      if (keyPressed && key == 'd') {//brush 1
+                        fill(245, 245, 221);//
+                        noStroke();
+                        
+                        ellipse(mouseX+random(10), mouseY+random(10),1,1);
+                        ellipse(mouseX-random(10), mouseY-random(10),1,1);
+                        ellipse(mouseX-random(10), mouseY+random(10),1,1);
+                        ellipse(mouseX+random(10), mouseY-random(10),1,1);
+                    
+                        ellipse(mouseX+random(10), mouseY+random(10),1,1);
+                        ellipse(mouseX-random(10), mouseY-random(20),1,1);
+                        ellipse(mouseX-random(10), mouseY+random(10),1,1);
+                        ellipse(mouseX+random(10), mouseY-random(20),1,1);
+
+                        ellipse(mouseX+random(10), mouseY+random(30),1,1);
+                        ellipse(mouseX-random(10), mouseY-random(30),1,1);
+                        ellipse(mouseX-random(10), mouseY+random(30),1,1);
+                        ellipse(mouseX+random(10), mouseY-random(30),1,1);
+
+                      }
+                      
+                    }
+
+                  </script>
+                  <canvas></canvas>
+                  <img src="p draw.png" alt="processing draw" style="width: 100%;">
+                  <p class="explain">d=draw,e=erase</p>
+              </div>
+
+
+
+
+
+
+              <div class="posters">
+                <!-- tm -->
+                <img id="tm" src="tm-gif.gif">
+
+                <!-- what is id poster -->
+                  <div class="whatisid">
+                    <img class="img-bot" src="dp-web-1.jpg">
+                    <img class="img-top" src="dp-web-2.jpg">
+                  </div>
+                
+                  <!-- footer button -->
+                  <button class="email">oscarhlchen@gmail.com</button>
+
+
+
+        
+        
+  </body>
+</html>

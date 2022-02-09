@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color:rgb(45,23,24);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* puzzle and text big box */
+.big__box{
+    display: grid;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+
+    margin-bottom: 100px;
+    margin-top: 0;
+    
+}
+
+/* intro text styles */
+.intro__box > button{
+    color:rgb(233, 181, 122);
+    border:rgb(233, 181, 122) 1px inset;
+    border-top: 3px solid rgba(255, 180, 130, 0.5);
+	border-left: 3px solid rgba(255, 179, 129, 0.5);
+	border-right: 3px solid rgba(88, 35, 0, 0.5);
+	border-bottom: 3px solid rgba(77, 31, 0, 0.5);
+    text-align: center;
+    font-family:"futura";
+    font-size: 24px;
+    background-color:rgb(205,133,63);
+    width: 500px;
+}
+
+/* wordpuzzle styles */
+.table__box{
+    display: grid;
+    grid-template-columns: repeat(10,50px);
+}
+
+.table__box > button{
+    border:rgb(233, 181, 122) 1px inset;
+    border-top: 3px solid rgba(255, 180, 130, 0.5);
+	border-left: 3px solid rgba(255, 179, 129, 0.5);
+	border-right: 3px solid rgba(88, 35, 0, 0.5);
+	border-bottom: 3px solid rgba(77, 31, 0, 0.5);
+    text-align: center;
+    font-family:"futura";
+    font-size: 30px;
+    background-color:rgb(205,133,63);
+    color:rgb(233, 181, 122);
+    padding: 20%;
+    
+}
+
+.highlight:hover{
+    border:rgb(233, 181, 122) 1px inset;
+    border-bottom: 3px solid rgba(255, 180, 130, 0.5);
+	border-right: 3px solid rgba(255, 179, 129, 0.5);
+	border-left: 3px solid rgba(88, 35, 0, 0.5);
+	border-top: 3px solid rgba(77, 31, 0, 0.5);
+    text-align: center;
+    font-family:"futura";
+    font-size: 30px;
+    background-color:rgb(205,133,63);
+    color:rgb(233, 181, 122);
+    padding: 20%;
+}
+
+.clicked{
+    border:rgb(233, 181, 122) 1px inset;
+    border-bottom: 3px solid rgba(255, 180, 130, 0.5);
+	border-right: 3px solid rgba(255, 179, 129, 0.5);
+	border-left: 3px solid rgba(88, 35, 0, 0.5);
+	border-top: 3px solid rgba(77, 31, 0, 0.5);
+    text-align: center;
+    font-family:"futura";
+    font-size: 30px;
+    background-color:rgb(255, 255, 255);
+    color:rgb(233, 181, 122);
+    padding: 20%;
+}
+
+
+
+
+
+
+
+/* lake and film layout */
+canvas {
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+
+
+/* two clocks layout */
+#clockbox{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+
+/* timer */
+.clock {
+    color:rgb(233, 181, 122);
+    font-size: 30px;
+    font-family: "futura";
+    letter-spacing: 7px;
+    position:block;
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+
+/* drawing explain*/
+.explain{
+    position:absolute;
+    top: 16px;
+    left: 16px;
+    font-family:"futura";
+    font-size: 30px;
+    color:rgb(233, 181, 122);
+}
+
+
+
+
+
+
+/* drawing */
+.panel{
+    margin-bottom: 100px;
+    position: relative;
+}
+
+
+
+
+
+/* tm */
+img {
+    display: block;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+  }
+
+/* what is id */
+.whatisid {
+    position: relative;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.whatisid .img-bot{
+    display: block;
+    width: 100%;
+}
+
+.whatisid .img-top {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+.whatisid:hover .img-top {
+    opacity: 1;
+}
+
+
+
+
+
+/* header */
+.name{
+    font-weight: 500;
+    color:rgb(233, 181, 122);
+    text-align: center;
+    font-family:"futura";
+    font-size: 48px;
+    position: absolute;
+    top: 3.5%;
+    left: 5%;
+    padding: 10px;
+}
+
+.portfolio{
+    color:rgb(233, 181, 122);
+    border:rgb(233, 181, 122) 1px inset;
+    border-top: 3px solid rgba(255, 180, 130, 0.5);
+	border-left: 3px solid rgba(255, 179, 129, 0.5);
+	border-right: 3px solid rgba(88, 35, 0, 0.5);
+	border-bottom: 3px solid rgba(77, 31, 0, 0.5);
+    text-align: center;
+    font-family:"futura";
+    font-size: 24px;
+    background-color:rgb(205,133,63);
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    padding: 10px;
+}
+
+
+/* footer */
+.email{
+    color:rgb(233, 181, 122);
+    border:rgb(233, 181, 122) 1px inset;
+    border-top: 3px solid rgba(255, 180, 130, 0.5);
+	border-left: 3px solid rgba(255, 179, 129, 0.5);
+	border-right: 3px solid rgba(88, 35, 0, 0.5);
+	border-bottom: 3px solid rgba(77, 31, 0, 0.5);
+    font-family:"futura";
+    font-size: 24px;
+    background-color:rgb(205,133,63);
+    padding: 10px;
+    display: block;
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
