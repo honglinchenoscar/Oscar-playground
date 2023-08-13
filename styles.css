@@ -42,7 +42,7 @@ body{
 	border-right: 3px solid rgba(88, 35, 0, 0.5);
 	border-bottom: 3px solid rgba(77, 31, 0, 0.5);
     text-align: center;
-    font-family:"futura";
+    font-family:"inter";
     font-size: 24px;
     background-color:rgb(205,133,63);
     width: 500px;
@@ -61,7 +61,7 @@ body{
 	border-right: 3px solid rgba(88, 35, 0, 0.5);
 	border-bottom: 3px solid rgba(77, 31, 0, 0.5);
     text-align: center;
-    font-family:"futura";
+    font-family:"inter";
     font-size: 30px;
     background-color:rgb(205,133,63);
     color:rgb(233, 181, 122);
@@ -76,7 +76,7 @@ body{
 	border-left: 3px solid rgba(88, 35, 0, 0.5);
 	border-top: 3px solid rgba(77, 31, 0, 0.5);
     text-align: center;
-    font-family:"futura";
+    font-family:"inter";
     font-size: 30px;
     background-color:rgb(205,133,63);
     color:rgb(233, 181, 122);
@@ -90,7 +90,7 @@ body{
 	border-left: 3px solid rgba(88, 35, 0, 0.5);
 	border-top: 3px solid rgba(77, 31, 0, 0.5);
     text-align: center;
-    font-family:"futura";
+    font-family:"inter";
     font-size: 30px;
     background-color:rgb(255, 255, 255);
     color:rgb(233, 181, 122);
@@ -129,7 +129,7 @@ canvas {
 .clock {
     color:rgb(233, 181, 122);
     font-size: 30px;
-    font-family: "futura";
+    font-family: "inter";
     letter-spacing: 7px;
     position:block;
     margin-top: 16px;
@@ -142,7 +142,7 @@ canvas {
     position:absolute;
     top: 16px;
     left: 16px;
-    font-family:"futura";
+    font-family:"inter";
     font-size: 30px;
     color:rgb(233, 181, 122);
 }
@@ -207,7 +207,7 @@ img {
     font-weight: 500;
     color:rgb(233, 181, 122);
     text-align: center;
-    font-family:"futura";
+    font-family:"inter";
     font-size: 48px;
     position: absolute;
     top: 3.5%;
@@ -223,7 +223,7 @@ img {
 	border-right: 3px solid rgba(88, 35, 0, 0.5);
 	border-bottom: 3px solid rgba(77, 31, 0, 0.5);
     text-align: center;
-    font-family:"futura";
+    font-family:"inter";
     font-size: 24px;
     background-color:rgb(205,133,63);
     position: absolute;
