@@ -51,7 +51,7 @@ body{
 /* wordpuzzle styles */
 .table__box{
     display: grid;
-    grid-template-columns: repeat(10,60px);
+    grid-template-columns: repeat(10,70px);
 }
 
 .table__box > button{
